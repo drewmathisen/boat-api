@@ -11,4 +11,20 @@ class BoatsController < ApplicationController
     render json: b.as_json
   end
 
+  def index
+
+    file = "#{Rails.root}/public/boat_data.csv"
+
+
+    boats = Boat.all
+
+    headers = ["name", "length", "color", "boat_type"]
+    
+    CSV.open(file, 'w', write_headers: true, headers: headers) do |writer|
+      boats.each do |boat| 
+      writer << [boat.id, boat.name, boat.color, boat.length, boat.boat_type] 
+      end
+    end
+  end
+
 end

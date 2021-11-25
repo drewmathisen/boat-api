@@ -8,3 +8,6 @@ Content-Type: application/json
   "color": "black and white",
   "type": "Small"
 }
+
+###  INDEX ACTION
+GET http://localhost:3000/boats.json
