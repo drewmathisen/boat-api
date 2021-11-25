@@ -1,0 +1,2 @@
+### CREATE ACTION
+POST http://localhost:3000/boats
