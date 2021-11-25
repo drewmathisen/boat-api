@@ -1,2 +1,10 @@
 ### CREATE ACTION
 POST http://localhost:3000/boats
+Content-Type: application/json
+
+{
+  "name": "Matilda",
+  "length": 2, 
+  "color": "black and white",
+  "type": "Small"
+}
